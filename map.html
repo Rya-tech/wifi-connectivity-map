@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_413d742ed7a80fe3536ba46ff8f2a4c9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+<h3 align="center">
+Wi-Fi Connectivity Infrastructure Map
+</h3>
+    
+            <div class="folium-map" id="map_413d742ed7a80fe3536ba46ff8f2a4c9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_413d742ed7a80fe3536ba46ff8f2a4c9 = L.map(
+                "map_413d742ed7a80fe3536ba46ff8f2a4c9",
+                {
+                    center: [12.9716, 77.5946],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_af0d0b43bca2f2cc2884478cf903b248 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u00a9 Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_af0d0b43bca2f2cc2884478cf903b248.addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+            var circle_marker_f7d66ea746163b08967f069c50bef18c = L.circleMarker(
+                [12.9716, 77.5946],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+        var popup_7c359821a5289277ad8ca16e2f200cab = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ad282cdc04f292d2898b53432124cae7 = $(`<div id="html_ad282cdc04f292d2898b53432124cae7" style="width: 100.0%; height: 100.0%;">     <b>Location:</b> Area 1<br>     <b>Signal:</b> -35 dBm<br>     <b>Quality:</b> Good<br>     <b>Router:</b> Router 1     </div>`)[0];
+                popup_7c359821a5289277ad8ca16e2f200cab.setContent(html_ad282cdc04f292d2898b53432124cae7);
+            
+        
+
+        circle_marker_f7d66ea746163b08967f069c50bef18c.bindPopup(popup_7c359821a5289277ad8ca16e2f200cab)
+        ;
+
+        
+    
+    
+            circle_marker_f7d66ea746163b08967f069c50bef18c.bindTooltip(
+                `<div>
+                     Area 1 - Good
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3dc7d0b9a817a012bc3b5c2570bac17 = L.circleMarker(
+                [12.975, 77.6],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+        var popup_6abceced53d554c04d028935ac0b7ebb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2c60a9586ffc6bd5677642494e0cba58 = $(`<div id="html_2c60a9586ffc6bd5677642494e0cba58" style="width: 100.0%; height: 100.0%;">     <b>Location:</b> Area 2<br>     <b>Signal:</b> -55 dBm<br>     <b>Quality:</b> Medium<br>     <b>Router:</b> Router 2     </div>`)[0];
+                popup_6abceced53d554c04d028935ac0b7ebb.setContent(html_2c60a9586ffc6bd5677642494e0cba58);
+            
+        
+
+        circle_marker_a3dc7d0b9a817a012bc3b5c2570bac17.bindPopup(popup_6abceced53d554c04d028935ac0b7ebb)
+        ;
+
+        
+    
+    
+            circle_marker_a3dc7d0b9a817a012bc3b5c2570bac17.bindTooltip(
+                `<div>
+                     Area 2 - Medium
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4471f98568b0ff661d4e5eb37b1729c1 = L.circleMarker(
+                [12.98, 77.585],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+        var popup_361a339e61a11bffe54d9810b47a3a70 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3cde547ffd2909bbf8c1b4da361a2684 = $(`<div id="html_3cde547ffd2909bbf8c1b4da361a2684" style="width: 100.0%; height: 100.0%;">     <b>Location:</b> Area 3<br>     <b>Signal:</b> -72 dBm<br>     <b>Quality:</b> Weak<br>     <b>Router:</b> Router 3     </div>`)[0];
+                popup_361a339e61a11bffe54d9810b47a3a70.setContent(html_3cde547ffd2909bbf8c1b4da361a2684);
+            
+        
+
+        circle_marker_4471f98568b0ff661d4e5eb37b1729c1.bindPopup(popup_361a339e61a11bffe54d9810b47a3a70)
+        ;
+
+        
+    
+    
+            circle_marker_4471f98568b0ff661d4e5eb37b1729c1.bindTooltip(
+                `<div>
+                     Area 3 - Weak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7b19254ae4013cfcbba5bae92dc67ac = L.circleMarker(
+                [12.965, 77.61],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+        var popup_2f9665d3eaa326578b3cf33c28fde2c9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_07890bd87489a4a9082f7931a03845c9 = $(`<div id="html_07890bd87489a4a9082f7931a03845c9" style="width: 100.0%; height: 100.0%;">     <b>Location:</b> Area 4<br>     <b>Signal:</b> -88 dBm<br>     <b>Quality:</b> No/Very Poor Signal<br>     <b>Router:</b> No nearby router     </div>`)[0];
+                popup_2f9665d3eaa326578b3cf33c28fde2c9.setContent(html_07890bd87489a4a9082f7931a03845c9);
+            
+        
+
+        circle_marker_e7b19254ae4013cfcbba5bae92dc67ac.bindPopup(popup_2f9665d3eaa326578b3cf33c28fde2c9)
+        ;
+
+        
+    
+    
+            circle_marker_e7b19254ae4013cfcbba5bae92dc67ac.bindTooltip(
+                `<div>
+                     Area 4 - No/Very Poor Signal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90d6082f70b040da316b18c70de6ab3e = L.circleMarker(
+                [12.99, 77.58],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+        var popup_370fc79f832e1d10e2a4b5631d18ffda = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_001f0cabf9d6686194a5299a0283f37c = $(`<div id="html_001f0cabf9d6686194a5299a0283f37c" style="width: 100.0%; height: 100.0%;">     <b>Location:</b> Area 5<br>     <b>Signal:</b> -45 dBm<br>     <b>Quality:</b> Good<br>     <b>Router:</b> Router 5     </div>`)[0];
+                popup_370fc79f832e1d10e2a4b5631d18ffda.setContent(html_001f0cabf9d6686194a5299a0283f37c);
+            
+        
+
+        circle_marker_90d6082f70b040da316b18c70de6ab3e.bindPopup(popup_370fc79f832e1d10e2a4b5631d18ffda)
+        ;
+
+        
+    
+    
+            circle_marker_90d6082f70b040da316b18c70de6ab3e.bindTooltip(
+                `<div>
+                     Area 5 - Good
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fdec94916dcd5d84c04a89cba9ee54d9 = L.circleMarker(
+                [12.955, 77.62],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+        var popup_ca8141b613f4ef750b208704714c4265 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b754b0aa50b53fd518d7409cd2a22855 = $(`<div id="html_b754b0aa50b53fd518d7409cd2a22855" style="width: 100.0%; height: 100.0%;">     <b>Location:</b> Area 6<br>     <b>Signal:</b> -95 dBm<br>     <b>Quality:</b> No/Very Poor Signal<br>     <b>Router:</b> No nearby router     </div>`)[0];
+                popup_ca8141b613f4ef750b208704714c4265.setContent(html_b754b0aa50b53fd518d7409cd2a22855);
+            
+        
+
+        circle_marker_fdec94916dcd5d84c04a89cba9ee54d9.bindPopup(popup_ca8141b613f4ef750b208704714c4265)
+        ;
+
+        
+    
+    
+            circle_marker_fdec94916dcd5d84c04a89cba9ee54d9.bindTooltip(
+                `<div>
+                     Area 6 - No/Very Poor Signal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var heat_map_af0ddf0b31ccfe393e621f190b5c8e55 = L.heatLayer(
+                [[12.9716, 77.5946, 0.07142857142857142], [12.975, 77.6, 0.35714285714285715], [12.98, 77.585, 0.6], [12.965, 77.61, 0.8285714285714286], [12.99, 77.58, 0.21428571428571427], [12.955, 77.62, 0.9285714285714286]],
+                {
+  "minOpacity": 0.3,
+  "maxZoom": 18,
+  "radius": 30,
+  "blur": 20,
+}
+            );
+        
+    
+            heat_map_af0ddf0b31ccfe393e621f190b5c8e55.addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+            var marker_59b011b138756ad8db3c6301c003b5d9 = L.marker(
+                [12.9716, 77.5946],
+                {
+}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+            var icon_7db61a2fb3dbaf7257b1894585be1846 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "wifi",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a53ec851d1771e2d3117d0988942aba0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fe4e31d839d36a8ae2e2bbd9d376dff = $(`<div id="html_6fe4e31d839d36a8ae2e2bbd9d376dff" style="width: 100.0%; height: 100.0%;">Router 1</div>`)[0];
+                popup_a53ec851d1771e2d3117d0988942aba0.setContent(html_6fe4e31d839d36a8ae2e2bbd9d376dff);
+            
+        
+
+        marker_59b011b138756ad8db3c6301c003b5d9.bindPopup(popup_a53ec851d1771e2d3117d0988942aba0)
+        ;
+
+        
+    
+    
+            marker_59b011b138756ad8db3c6301c003b5d9.bindTooltip(
+                `<div>
+                     Router 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_59b011b138756ad8db3c6301c003b5d9.setIcon(icon_7db61a2fb3dbaf7257b1894585be1846);
+            
+    
+            var marker_150559c8e4736e65cbeb5a490c779977 = L.marker(
+                [12.975, 77.6],
+                {
+}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+            var icon_758ed2751624881ec8b00118b59f87a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "wifi",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a9c7040680820d78f2bd09ce0b1fc816 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d446ae29c10845ba0009d0b887b2b8b = $(`<div id="html_5d446ae29c10845ba0009d0b887b2b8b" style="width: 100.0%; height: 100.0%;">Router 2</div>`)[0];
+                popup_a9c7040680820d78f2bd09ce0b1fc816.setContent(html_5d446ae29c10845ba0009d0b887b2b8b);
+            
+        
+
+        marker_150559c8e4736e65cbeb5a490c779977.bindPopup(popup_a9c7040680820d78f2bd09ce0b1fc816)
+        ;
+
+        
+    
+    
+            marker_150559c8e4736e65cbeb5a490c779977.bindTooltip(
+                `<div>
+                     Router 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_150559c8e4736e65cbeb5a490c779977.setIcon(icon_758ed2751624881ec8b00118b59f87a1);
+            
+    
+            var marker_78e6fb2bc75c5531c96c52e85341f4fe = L.marker(
+                [12.98, 77.585],
+                {
+}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+            var icon_022fb1d7966a272ecdd825fe066c38bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "wifi",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d94b5f84b3123c9979aaa719228c831 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d18a4c5de2063c0f383e95b15477526 = $(`<div id="html_1d18a4c5de2063c0f383e95b15477526" style="width: 100.0%; height: 100.0%;">Router 3</div>`)[0];
+                popup_4d94b5f84b3123c9979aaa719228c831.setContent(html_1d18a4c5de2063c0f383e95b15477526);
+            
+        
+
+        marker_78e6fb2bc75c5531c96c52e85341f4fe.bindPopup(popup_4d94b5f84b3123c9979aaa719228c831)
+        ;
+
+        
+    
+    
+            marker_78e6fb2bc75c5531c96c52e85341f4fe.bindTooltip(
+                `<div>
+                     Router 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78e6fb2bc75c5531c96c52e85341f4fe.setIcon(icon_022fb1d7966a272ecdd825fe066c38bd);
+            
+    
+            var marker_c7ca7b1d73ad2457dd9d25fa30d5f13f = L.marker(
+                [12.99, 77.58],
+                {
+}
+            ).addTo(map_413d742ed7a80fe3536ba46ff8f2a4c9);
+        
+    
+            var icon_37d3f13ebe13fcc6ef76574662dd7035 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "wifi",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50a6367445aa15bb580579b748a6c7d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e82459fffec7bffe18beb08ed2441b6c = $(`<div id="html_e82459fffec7bffe18beb08ed2441b6c" style="width: 100.0%; height: 100.0%;">Router 5</div>`)[0];
+                popup_50a6367445aa15bb580579b748a6c7d2.setContent(html_e82459fffec7bffe18beb08ed2441b6c);
+            
+        
+
+        marker_c7ca7b1d73ad2457dd9d25fa30d5f13f.bindPopup(popup_50a6367445aa15bb580579b748a6c7d2)
+        ;
+
+        
+    
+    
+            marker_c7ca7b1d73ad2457dd9d25fa30d5f13f.bindTooltip(
+                `<div>
+                     Router 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7ca7b1d73ad2457dd9d25fa30d5f13f.setIcon(icon_37d3f13ebe13fcc6ef76574662dd7035);
+            
+</script>
+</html>
